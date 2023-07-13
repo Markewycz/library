@@ -121,25 +121,32 @@ function addBookModal() {
           />
           <fieldset class="read-fieldset">
             <legend class="option">Read:</legend>
-            <input
-              type="radio"
-              id="readRadio"
-              value="read"
-              name="read"
-              checked
-            />
-            <label for="readRadio">Read</label>
+            <div class="radio-container">
+              <input
+                type="radio"
+                id="readRadio"
+                value="read"
+                name="read"
+                checked
+              />
+              <label for="readRadio">Read</label>
+            </div>
 
-            <input type="radio" id="unreadRadio" value="unread" name="read" />
-            <label for="unreadRadio">Unread</label>
-            <input
-              type="radio"
-              id="inProgessRadio"
-              class="in-progress"
-              value="in progress"
-              name="read"
-            />
-            <label for="inProgessRadio">In progress</label>
+            <div class="radio-container">
+              <input type="radio" id="unreadRadio" value="unread" name="read" />
+              <label for="unreadRadio">Unread</label>
+            </div>
+
+            <div class="radio-container">
+              <input
+                type="radio"
+                id="inProgessRadio"
+                class="in-progress"
+                value="in progress"
+                name="read"
+              />
+              <label for="inProgessRadio">In progress</label>
+            </div>
             <div class="completion-container">
               <label for="inputCompletion" class="option">Completion:</label>
               <input
@@ -192,27 +199,34 @@ function editBookModal(id) {
           />
           <fieldset class="read-fieldset">
             <legend class="option">Read:</legend>
-            <input
-              type="radio"
-              id="readRadio"
-              value="read"
-              name="read"
-              ${library[id].radioState.read === true ? "checked" : ""}
-            />
-            <label for="readRadio">Read</label>
+            <div class="radio-container">
+              <input
+                type="radio"
+                id="readRadio"
+                value="read"
+                name="read"
+                ${library[id].radioState.read === true ? "checked" : ""}
+              />
+              <label for="readRadio">Read</label>
+            </div>
 
-            <input type="radio" id="unreadRadio" value="unread" name="read" 
-            ${library[id].radioState.unread === true ? "checked" : ""}/>
-            <label for="unreadRadio">Unread</label>
-            <input
-              type="radio"
-              id="inProgessRadio"
-              class="in-progress"
-              value="in progress"
-              name="read"
-              ${library[id].radioState.inProgress === true ? "checked" : ""}
-            />
-            <label for="inProgessRadio">In progress</label>
+            <div class="radio-container">
+              <input type="radio" id="unreadRadio" value="unread" name="read" 
+              ${library[id].radioState.unread === true ? "checked" : ""}/>
+              <label for="unreadRadio">Unread</label>
+            </div>
+
+            <div class="radio-container">
+              <input
+                type="radio"
+                id="inProgessRadio"
+                class="in-progress"
+                value="in progress"
+                name="read"
+                ${library[id].radioState.inProgress === true ? "checked" : ""}
+              />
+              <label for="inProgessRadio">In progress</label>
+            </div>
             <div class="completion-container">
               <label for="inputCompletion" class="option">Completion:</label>
               <input
