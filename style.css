@@ -210,7 +210,14 @@ body {
   grid-template-rows: auto 1fr 1fr; */
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  /* gap: 10px; */
+}
+.radio-container {
+  margin-right: 10px;
+}
+
+.radio-container:nth-child(4) {
+  margin-right: -10px;
 }
 
 /* .read-fieldset > *:not(:first-child) {
