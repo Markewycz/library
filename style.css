@@ -1,0 +1,221 @@
+/* 
+--primary-color: #588157;
+--secondary-color: #e2e8f0;
+--secondary-color-darker: #808488;
+--secondary-color-darkest: #393a3b;
+
+font-family: 'Source Code Pro', monospace;
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  background-color: #e2e8f0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  grid-column: 1 / 2;
+
+  font-weight: 600;
+  font-style: italic;
+}
+
+.button-container {
+  grid-column: 3 / 4;
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.add-book {
+  width: clamp(105px, 60%, 140px);
+
+  color: #ffffff;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #073b4c;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  /* transform: translateY(-2px); */
+  padding: 10px;
+}
+
+.main-container {
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+}
+
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 270px);
+  grid-template-rows: repeat(auto-fill, 300px);
+
+  gap: 30px;
+}
+
+.book {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, 50px);
+
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  border-top: #073b4c solid 10px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.books-edit {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.option {
+  font-size: 0.8rem;
+  color: #073b4c;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* display:grid; */
+  display: none;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.modal-content {
+  width: clamp(220px, 80%, 350px);
+
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modal-content h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #073b4c;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.add-book-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 10px; */
+}
+
+.add-book-form .option {
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #073b4c;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.add-book-form .add-book {
+  width: 100%;
+}
+
+.read-fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+
+.input-text {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+
+.input-text:focus {
+  outline: none;
+  border: 1px solid #073b4c;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #999;
+}
+
+input[type="radio"]:checked {
+  background-color: #073b4c;
+  border-color: #073b4c;
+}
+
+.completion-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s;
+}
+
+/* .button-container {
+  display: flex;
+  gap: 10px;
+} */
