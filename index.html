@@ -20,16 +20,12 @@
   <body>
     <header class="header">
       <h1 class="header-title">Library</h1>
-
       <div class="button-container">
-        <!-- <button type="button" id="save" class="button add-book" onclick="saveLibrary()">
-          Save Library
-        </button> -->
         <button
           type="button"
           id="addBook"
           class="button add-book"
-          onclick="openModal()"
+          onclick="addBookModal()"
         >
           Add Book
         </button>
@@ -38,88 +34,12 @@
 
     <main class="main-container">
       <h3 class="your-books">Your books:</h3>
-      <div class="books-container">
-        <div class="book">
-          <div class="book-title">
-            <span class="option">Title:</span>
-            <h4 id="title"></h4>
-          </div>
-          <div class="book-author">
-            <span class="option">Author:</span>
-            <h4 id="author"></h4>
-          </div>
-          <div class="book-pages">
-            <span class="option">Pages:</span>
-            <h4 id="pages"></h4>
-          </div>
-          <div class="book-read">
-            <span class="option">Read:</span>
-            <h4 id="read"></h4>
-          </div>
-          <div class="book-completion">
-            <span class="option">Completion:</span>
-            <h4 id="completion"></h4>
-          </div>
-        </div>
-      </div>
+      <div class="books-container"></div>
+      <img src="images/no-books.png" alt="no books" class="empty-lib-img" />
     </main>
 
     <div class="modal">
-      <div class="modal-content">
-        <span class="material-symbols-outlined close" onclick="closeModal()"
-          >close</span
-        >
-        <h3>Add a book</h3>
-        <form id="formAddBook" class="add-book-form" action="">
-          <label for="inputTitle" class="option">Title:</label>
-          <input type="text" id="inputTitle" class="input-text" required />
-          <label for="inputAuthor" class="option">Author:</label>
-          <input type="text" id="inputAuthor" class="input-text" required />
-          <label for="inputPages" class="option">Pages:</label>
-          <input
-            type="text"
-            id="inputPages"
-            class="input-text"
-            pattern="\d*"
-            required
-          />
-          <fieldset class="read-fieldset">
-            <legend class="option">Read:</legend>
-            <input
-              type="radio"
-              id="readRadio"
-              value="read"
-              name="read"
-              checked
-            />
-            <label for="readRadio">Read</label>
-
-            <input type="radio" id="unreadRadio" value="unread" name="read" />
-            <label for="unreadRadio">Unread</label>
-            <input
-              type="radio"
-              id="inProgessRadio"
-              class="in-progress"
-              value="in progress"
-              name="read"
-            />
-            <label for="inProgessRadio">In progress</label>
-            <div class="completion-container">
-              <label for="inputCompletion" class="option">Completion:</label>
-              <input
-                type="text"
-                id="inputCompletion"
-                class="input-text completion"
-                pattern="\d*"
-                placeholder="Number of pages read"
-              />
-            </div>
-          </fieldset>
-          <button type="submit" id="addBookButton" class="button add-book">
-            Add Book
-          </button>
-        </form>
-      </div>
+      <div class="modal-content"></div>
     </div>
   </body>
 </html>

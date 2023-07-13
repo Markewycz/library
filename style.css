@@ -215,7 +215,25 @@ input[type="radio"]:checked {
   transition: all 0.3s;
 }
 
-/* .button-container {
-  display: flex;
-  gap: 10px;
-} */
+.empty-lib-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  visibility: visible;
+  opacity: 0.1;
+
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  transition: all 0.3s;
+}
+
+.your-books {
+  display: none;
+}
