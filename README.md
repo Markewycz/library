@@ -17,7 +17,8 @@ Library web app where users can store, edit and delete data about the books they
 
 ### Outcome
 
-- Used Objects to create Book Objects that are stored in the array
+- ~~Used Objects to create Book Objects that are stored in the array~~
+- Used Classes to divide code and structure it for better readability
 - Created custom vector images and logos using Figma
 - Tried to maintain clean code
 - Used CSS3 grid and flex for layout
